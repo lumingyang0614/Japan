@@ -1,48 +1,43 @@
-# Japan Culture Travel History Platform
+# Okinawa Road Trip (Static Website)
 
-This is a multi-agent inspired prototype for Tokyo culture, travel, and history.
-It ships with a FastAPI backend and a lightweight frontend that calls the API.
+This is a static itinerary website (6-day trip) designed for GitHub Pages.
 
 ## Structure
 
-- `backend/` FastAPI service and agent modules
-- `frontend/` Static UI that calls the API
+- `index.html` main page (GitHub Pages entry)
+- `styles.css` layout and styling
+- `app.js` itinerary data + rendering logic
+- `frontend/` original source copies (same content)
 
-## Backend
+## View Locally
 
-```bash
-cd backend
-python -m venv .venv
-.venv\\Scripts\\activate
-pip install -r requirements.txt
-uvicorn app.main:app --reload
-```
+Open in a browser:
 
-API base URL: `http://127.0.0.1:8000/api`
+- `index.html`
 
-Useful endpoints:
+## How to Edit the Itinerary
 
-- `GET /api/health`
-- `GET /api/cities`
-- `GET /api/areas`
-- `GET /api/eras`
-- `GET /api/timeline`
-- `POST /api/query`
+Edit `tripDays` in `app.js`. Each stop includes:
 
-Example request:
+- `time` time
+- `title` place name
+- `subtitle` type
+- `description` short description
+- `stay` stay minutes
+- `location` area
+- `image` image URL
+- `notes` extra notes
+- `mapQuery` / `mapLinks` / `mapEmbeds` (optional map links or embeds)
 
-```bash
-curl -X POST http://127.0.0.1:8000/api/query ^
-  -H "Content-Type: application/json" ^
-  -d "{\"question\":\"Plan a half day in Asakusa\",\"city\":\"Tokyo\",\"area\":\"Asakusa\",\"interest\":\"history\"}"
-```
+## Deploy to GitHub Pages
 
-## Frontend
+1. Push the repo to GitHub
+2. Go to Settings → Pages
+3. Source: `Deploy from a branch`
+4. Branch: `main`, Folder: `/`
+5. Save and wait a few minutes for the URL
 
-Open `frontend/index.html` in a browser and update the API base URL if needed.
+## Next Steps
 
-## Next steps
-
-- Expand data and add real map/timeline visualization
-- Add database storage and user profiles
-- Add tests for each agent module
+- Customize the theme or add more days
+- Replace with your own photos and map links
