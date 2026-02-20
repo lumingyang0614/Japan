@@ -375,6 +375,46 @@ pre {
   border-radius: 12px;
 }
 
+.packing-list {
+  display: grid;
+  gap: 16px;
+}
+
+.packing-group h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-dark);
+}
+
+.packing-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.packing-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(176, 71, 27, 0.12);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  color: #3f352b;
+}
+
+.carry-on {
+  margin-left: auto;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(240, 125, 60, 0.2);
+  color: var(--accent-dark);
+}
+
 @keyframes floatIn {
   from {
     opacity: 0;
