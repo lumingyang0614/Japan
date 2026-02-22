@@ -415,6 +415,32 @@ pre {
   color: var(--accent-dark);
 }
 
+.flight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.flight-card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(176, 71, 27, 0.15);
+  border-radius: 16px;
+  padding: 14px 16px;
+  display: grid;
+  gap: 6px;
+}
+
+.flight-card span {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.flight-card strong {
+  font-size: 1.05rem;
+}
+
 @keyframes floatIn {
   from {
     opacity: 0;
